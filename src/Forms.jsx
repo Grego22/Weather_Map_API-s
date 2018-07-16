@@ -4,12 +4,15 @@ class Forms extends React.Component{
 
     render(){
         return (
-            <form onSubmit={this.props.loadWeather}>
-             <label className="sr-only" for="inlineFormInput">Name</label>
-            <input  type="text" name="city" placeholder="City..."/>
-            <input type="text" name="country" placeholder="Country..."/>
-            <button className="btn btn-primary"> Get Weather </button>
-            </form>
+                <form className= "form-inline" onSubmit={this.props.loadWeather}>
+                <div className="form-group">
+                    <input  type="text" name="city" placeholder="City..."/>
+                </div>
+                <div className="form-group">
+                <input classname="sr-only" type="text" name="country" placeholder="Country..."/>
+                </div>
+                <button className="btn btn-primary"> Get Weather </button>
+                </form>
         )
     }   
 }
