@@ -1,16 +1,17 @@
 import React from 'react'
+import { FormGroup, Input, FormControl } from 'react-bootstrap'
 
 class Forms extends React.Component{
 
     render(){
         return (
                 <form className= "form-inline" onSubmit={this.props.loadWeather}>
-                <div className="form-group">
-                    <input  type="text" name="city" placeholder="City..."/>
-                </div>
-                <div className="form-group">
-                <input classname="sr-only" type="text" name="country" placeholder="Country..."/>
-                </div>
+                <FormGroup bsSize="large">
+                    <FormControl type="text" name="city" placeholder="City..."/>
+                </FormGroup>
+                <FormGroup bsSize="large">
+                <FormControl classname="sr-only" type="text" name="country" placeholder="Country..."/>
+                </FormGroup>
                 <button className="btn btn-primary"> Get Weather </button>
                 </form>
         )
