@@ -10,7 +10,7 @@ class Forms extends React.Component{
                     <FormControl type="text" name="city" placeholder="City..."/>
                 </FormGroup>
                 <FormGroup bsSize="large">
-                <FormControl classname="sr-only" type="text" name="country" placeholder="Country..."/>
+                    <FormControl  type="text" name="country" placeholder="Country..."/>
                 </FormGroup>
                 <button className="btn btn-primary"> Get Weather </button>
                 </form>
