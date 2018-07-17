@@ -3,13 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 import MyComponent from  './MyComponent.jsx'
 import NavigatorComponent from './NavigatorComponent.jsx'
-import Clock from './Clock.js'
+import Clock from './Clock.jsx'
 import Forms from './Forms.jsx'
 import Weather from './Weather.jsx'
 import moment from 'moment'
 import GoogleMapReact from 'google-map-react';
 import GoogleMap from './GoogleMap.jsx'
 import { FormGroup, Input } from 'react-bootstrap'
+import Login from './Login.jsx'
 
 const Api_Key = `${process.env.REACT_APP_WEATHER_API}`
 

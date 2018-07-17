@@ -21,7 +21,7 @@ class GoogleMap extends Component {
     console.log(`${process.env.REACT_APP_TEST}`)
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: '100vh', width: '100%' }}>
+      <div style={{ height: '50vh', width: '75vh' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY_2}}
           defaultCenter={this.props.center}
