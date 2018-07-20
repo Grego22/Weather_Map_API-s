@@ -1,9 +1,10 @@
 import React from 'react'
 import axios from 'axios'
+import Forexforms from './Forexforms.jsx'
 
 
 const api_key = (' V736K62LC1EHN6NP')
-const api_call_symbols = ('https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=JPY&apikey='+api_key)
+const api_call_symbols = ('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=15min&outputsize=full&apikey='+api_key)
 // const response = await api_call.symbols.json()
 
 class Forex extends React.Component{
@@ -22,6 +23,9 @@ class Forex extends React.Component{
         
         
         })
+    }
+    buystock(){
+
     }
 
     render(){
