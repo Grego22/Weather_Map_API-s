@@ -12,7 +12,7 @@ import GoogleMap from './GoogleMap.jsx'
 import { FormGroup, Input } from 'react-bootstrap'
 import Login from './Login.jsx'
 import ForexForms from './Forexforms.jsx'
-// import Forex from './Forex.jsx'
+import Forex from './Forex.jsx'
 
 const Api_Key = `${process.env.REACT_APP_WEATHER_API}`
 
@@ -78,6 +78,7 @@ class App extends Component {
         description={this.state.description}
         error={this.state.error}/>
      <GoogleMap/>
+      <Forex></Forex>
  
       </div>
       )

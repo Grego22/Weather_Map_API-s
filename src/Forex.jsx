@@ -3,8 +3,8 @@ import axios from 'axios'
 
 
 const api_key = (' V736K62LC1EHN6NP')
-const api_call_symbols = await fetch('https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=JPY&apikey='+api_key)
-const response = await api_call.symbols.json()
+const api_call_symbols = ('https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=JPY&apikey='+api_key)
+// const response = await api_call.symbols.json()
 
 class Forex extends React.Component{
     constructor(){
@@ -18,17 +18,21 @@ class Forex extends React.Component{
     componentDidMount(){
         axios.get(api_call_symbols)
         .then (res => {
-
+            console.log(res.data)
+        
+        
         })
     }
 
-    render(
+    render(){
+        return(
         <div className="container">
-        </div>    
+        </div>   
+        ) 
 
-    )        
+    }        
     }
 
 
 
-// export default Forex
+export default Forex
