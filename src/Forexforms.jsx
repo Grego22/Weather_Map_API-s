@@ -7,28 +7,21 @@ class Forexforms extends React.Component{
     constructor() {
         super();
         this.state = {ticker:""}
+        this.handleTicker = this.handleTicker.bind(this)
     }
 
-    componentWillMount() {
-        this.myChoice = null;        
+    handleTicker(event) {
+        const target = event.target;
+        const value = target.value.toUpperCase();
+        this.setState({
+            ticker: value
+        })
+    
     }
-
-    handleTicker(symbol) {
-        this.myChoice = symbol.target.value;
-        console.log(this.myChoice);
-    }
-
-    handleChoice() {
-        this.setState({ticker: this.myChoice});
-    }
-
     render(){
         return (
             <div>
                 <form className= "form-inline" onSubmit={this.props.buystock}>
-                <FormGroup bsSize="large">
-                    <FormControl type="text" name="city" placeholder="Ticker Symbol.."/>
-                </FormGroup>
                 <input onChange={this.handleTicker} value={this.state.ticker}></input>
                 <button onClick={this.handleChoice} className="btn btn-success"> Buy Stock </button>
                 </form>
