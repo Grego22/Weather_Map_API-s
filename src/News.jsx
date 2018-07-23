@@ -9,17 +9,37 @@ const postman_url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=c062
 class News extends Component{
     constructor(){
         super()
-        this.state={
+        this.state={data: []}
 
         }
-    }
+    
 
 
 componentDidMount(){
+    fetch(postman_url)
+        .then(res => {
+            var data2 = {}
+            data2=JSON.stringify(res.data)
+            console.log(data2)
+        })
+    }
+
+    render(){
+        return(
+            <div>
+                <ul>
+               
+                <li>
+                
+                </li>
+                </ul>
+            </div>
+        )
+    }
 
     }
 
-}
+
 
 
 export default News

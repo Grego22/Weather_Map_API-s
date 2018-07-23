@@ -21,7 +21,7 @@ class Forex extends React.Component{
         axios.get(api_call_symbols)
         .then (res => {
             var data1  = {};
-            data1 = JSON.stringify(res.data['Stock Quotes'].map);
+            data1 = JSON.stringify(res.data);
             console.log( data1 )
         
         

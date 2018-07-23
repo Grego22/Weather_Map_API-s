@@ -79,8 +79,9 @@ class App extends Component {
         description={this.state.description}
         error={this.state.error}/>
      <GoogleMap/>
-     <Forexforms></Forexforms>
-      <Forex></Forex>
+     {/* <Forexforms></Forexforms>
+      <Forex></Forex> */}
+      <News></News>
  
       </div>
       )
