@@ -18,15 +18,28 @@ class News extends Component{
 
 
 componentDidMount(){
-    axios.get(postman_url)
-        .then(res => {
-            var data2 = {}
-            data2 = JSON.stringify(res.data)
-            var source = [{"source" :"id"}]
-            console.log(data2)
-            // console.log(source)
-            
-        })
+    
+    fetch(postman_url)
+    .then(function(res){
+        return res.json();
+    }).then(function(data){
+        console.log(data);
+        console.log(data.status);
+    })
+    /*
+    .then(res=>{
+        return res.json();
+    }).then(data=>{
+        console.log(data);
+        console.log(data.status);
+        console.log(data.totalResults);
+        console.log(data.status);
+        console.log(data.articles);
+        console.log(data.articles[1].author)
+    })
+    */
+
+        
     } 
 
     render(){
