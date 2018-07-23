@@ -15,6 +15,7 @@ class Forexforms extends React.Component{
         const value = target.value.toUpperCase();
         this.setState({
             ticker: value
+            // volume: response.volume
         })
     
     }
@@ -26,6 +27,7 @@ class Forexforms extends React.Component{
                 <button onClick={this.handleChoice} className="btn btn-success"> Buy Stock </button>
                 </form>
                 <h1>This stock: {this.state.ticker}</h1>
+                <h1>Volume: {this.state.volume}</h1>
             </div>
         )
     }   

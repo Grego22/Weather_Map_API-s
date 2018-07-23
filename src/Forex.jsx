@@ -3,8 +3,9 @@ import axios from 'axios'
 import Forexforms from './Forexforms.jsx'
 
 
-const api_key = (' V736K62LC1EHN6NP')
-const api_call_symbols = ('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=15min&outputsize=full&apikey='+api_key)
+// const api_key = (' V736K62LC1EHN6NP')
+    const api_key = ('UBXHXOE1AU2GHYG7')
+const api_call_symbols = ('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=NFLX&interval=15min&outputsize=full&apikey='+api_key)
 // const response = await api_call.symbols.json()
 
 class Forex extends React.Component{
@@ -19,12 +20,17 @@ class Forex extends React.Component{
     componentDidMount(){
         axios.get(api_call_symbols)
         .then (res => {
-            console.log(res.data)
+            var data1  = {};
+            data1 = JSON.stringify(res.data['Stock Quotes'].map);
+            console.log( data1 )
         
         
         })
     }
     buystock(){
+        this.setState({
+            
+        })
 
     }
 

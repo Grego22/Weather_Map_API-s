@@ -13,6 +13,7 @@ import { FormGroup, Input } from 'react-bootstrap'
 import Login from './Login.jsx'
 import Forexforms from './Forexforms.jsx'
 import Forex from './Forex.jsx'
+import News from './News.jsx'
 
 const Api_Key = `${process.env.REACT_APP_WEATHER_API}`
 
