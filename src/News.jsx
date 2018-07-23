@@ -7,17 +7,23 @@ const postman_url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=c062
 
 
 class News extends Component{
-    constructor(){
-        super()
-        this.state={data : []
+    constructor(props){
+        super(props)
+        this.state={data : [],
+            // author: undefined, 
+            // title1: undefined, 
+            // title2: undefined,
+            // title3: undefined,
+            // title4: undefined,
 
         }
+      
 
         }
     
 
 
-componentDidMount(){
+    getNews= () => {
     
     fetch(postman_url)
     .then(function(res){
@@ -25,6 +31,9 @@ componentDidMount(){
     }).then(function(data){
         console.log(data);
         console.log(data.status);
+        const x = (data.articles[2].title)
+        this.setState(data)
+        console.log(this.state.title1)
     })
     /*
     .then(res=>{
@@ -48,7 +57,7 @@ componentDidMount(){
                 <ul>
                
                 <li>
-                
+                    
                 </li>
                 </ul>
             </div>
