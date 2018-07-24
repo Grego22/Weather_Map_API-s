@@ -14,6 +14,7 @@ import Login from './Login.jsx'
 import Forexforms from './Forexforms.jsx'
 import Forex from './Forex.jsx'
 import News from './News.jsx'
+import NewsForm from './NewsForm.jsx'
 
 const Api_Key = `${process.env.REACT_APP_WEATHER_API}`
 
@@ -81,7 +82,8 @@ class App extends Component {
      <GoogleMap/>
      {/* <Forexforms></Forexforms>
       <Forex></Forex> */}
-      <News></News>
+      <News/>
+
  
       </div>
       )

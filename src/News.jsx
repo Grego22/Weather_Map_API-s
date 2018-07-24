@@ -1,20 +1,19 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import NewsForm from './NewsForm.jsx'
 
-const ft_api = '59cbaf20e3e06d3565778e7b8fcedd4bc8d44c6dab07fe22cf287fa6'
 const news_api = 'c0624797a07a4e1988dbc5624f00c7a0'
 const postman_url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=c0624797a07a4e1988dbc5624f00c7a0'
-
 
 class News extends Component{
     constructor(props){
         super(props)
         this.state={data : [],
-            // author: undefined, 
-            // title1: undefined, 
-            // title2: undefined,
-            // title3: undefined,
-            // title4: undefined,
+            author: undefined, 
+            title1: undefined, 
+            title2: undefined,
+            title3: undefined,
+            title4: undefined,
 
         }
       
@@ -24,6 +23,7 @@ class News extends Component{
 
 
     getNews= () => {
+        const response =  postman_url.json()
     
     fetch(postman_url)
     .then(function(res){
@@ -32,9 +32,10 @@ class News extends Component{
         console.log(data);
         console.log(data.status);
         const x = (data.articles[2].title)
-        this.setState(data)
-        console.log(this.state.title1)
+        this.setState({
+        title4: response.data.articles[2].title
     })
+})
     /*
     .then(res=>{
         return res.json();
@@ -51,13 +52,14 @@ class News extends Component{
         
     } 
 
+
     render(){
         return(
             <div>
                 <ul>
                
                 <li>
-                    
+                    <NewsForm loadNews = {this.getNews}/>
                 </li>
                 </ul>
             </div>
